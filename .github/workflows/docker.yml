@@ -33,4 +33,6 @@ jobs:
           file: ./Dockerfile 
           push: true
           tags: hts2-akshathap-docker.jfrog.io/akshathap-docker/demo-app:latest
+          platforms: linux/amd64,linux/arm64
+          outputs: type=image,oci-mediatypes=false          
           
