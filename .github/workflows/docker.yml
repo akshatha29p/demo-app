@@ -37,5 +37,8 @@ jobs:
           file: ./Dockerfile 
           push: true
           tags: hts2-akshathap-docker.jfrog.io/akshathap-docker/demo-app:latest
+          provenance: false
+          sbom: false
+          outputs: type=registry,oci-mediatypes=false
      
           
