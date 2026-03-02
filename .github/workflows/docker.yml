@@ -34,6 +34,7 @@ jobs:
           file: ./Dockerfile 
           push: true
           tags: hts2-akshathap-docker.jfrog.io/demo-app:latest
+          platforms: linux/amd64,linux/arm64
          
      
           
