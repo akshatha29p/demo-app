@@ -19,6 +19,15 @@ jobs:
           driver: docker-container
           driver-opts: |
             image=moby/buildkit:v0.27.0
+      - name: Insecure Docker Repository
+        run: |
+          sudo tee /etc/docker/daemon.json <<EOF
+          {
+           "insecure-registries": ["support-team-akshathap-arti.jfrog.farm:8081"]
+          }
+          EOF
+          sudo systemctl restart docker
+
       - name: Login to Artifactory (HTTP)
         run: |
           docker login http://support-team-akshathap-arti.jfrog.farm:8081 \
