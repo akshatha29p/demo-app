@@ -33,6 +33,7 @@ jobs:
           push: true
           tags: support-team-akshathap-arti.jfrog.farm:8081/test-docker/demo-app:latest
           platforms: linux/amd64,linux/arm64
+          extra-args: --insecure
          
      
           
