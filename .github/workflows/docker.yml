@@ -19,6 +19,11 @@ jobs:
           driver: docker-container
           driver-opts: |
             image=moby/buildkit:v0.27.0
+          buildkitd-config-inline: |
+            [registry."support-team-akshathap-arti.jfrog.farm:8081"]
+              http = true
+              insecure = true
+          
       - name: Insecure Docker Repository
         run: |
           sudo tee /etc/docker/daemon.json <<EOF
