@@ -1,5 +1,5 @@
 # -------- Build Stage --------
-FROM support-team-akshathap-arti.jfrog.farm:8081/test-docker/eclipse-temurin:11-jdk AS build
+FROM https://mill.jfrog.info:12451/test-docker/eclipse-temurin:11-jdk AS build
 WORKDIR /app
 
 # Install Maven
@@ -21,7 +21,7 @@ RUN mvn -B -DskipTests clean package
 
 
 # -------- Runtime Stage --------
-FROM support-team-akshathap-arti.jfrog.farm:8081/test-docker/eclipse-temurin:11-jre
+FROM https://mill.jfrog.info:12451/eclipse-temurin:11-jre
 WORKDIR /app
 
 COPY --from=build /app/target/demo-app-1.0-SNAPSHOT.jar app.jar
