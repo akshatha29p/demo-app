@@ -23,7 +23,7 @@ jobs:
 
       - name: Login to Artifactory (HTTP)
         run: |
-          docker login https://mill.jfrog.info:12451 \
+          docker login mill.jfrog.info:12451 \
             -u ${{ secrets.DOCKER_USERNAME }} \
             -p ${{ secrets.DOCKER_PASSWORD }}
 
