@@ -33,7 +33,7 @@ jobs:
           context: .
           file: ./Dockerfile 
           push: true
-          tags: https://mill.jfrog.info:12451/test-docker/demo-app:latest
+          tags: mill.jfrog.info:12451/test-docker/demo-app:latest
           platforms: linux/amd64,linux/arm64
          
          
